@@ -15,6 +15,11 @@ body.night-mode {
     background-color: #08262e;
     overflow: hidden;
     padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Centra i link di navigazione */
+    align-items: center; /* Allinea verticalmente */
+    position: relative; /* Necessario per il posizionamento degli elementi assoluti */
+    flex-wrap: wrap; /* Permette di gestire meglio lo spazio su dispositivi mobili */
 }
 
 body.night-mode .top-nav {
@@ -22,7 +27,6 @@ body.night-mode .top-nav {
 }
 
 .top-nav a {
-    float: left;
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
@@ -49,26 +53,27 @@ body.night-mode .top-nav a:hover {
 }
 
 .logo {
-    float: left;
-    margin-right: 20px;
+    position: absolute;
+    left: 20px; /* Posiziona la logo sulla sinistra */
 }
 
 .logo img {
-        width: 28px; 
-        height: 28px; 
-        object-fit: contain; 
-    
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: 50%; /* Rende l'immagine arrotondata */
 }
 
 .top-right {
-    float: right;
+    position: absolute;
+    right: 20px; /* Posiziona il gruppo di icone sulla destra */
 }
 
 .top-right button {
     background-color: #ff4c4c;
     border: none;
     color: white;
-    padding: 8px;
+    padding: 8px; /* Ridotto per allinearsi con le icone */
     margin: 0 10px;
     cursor: pointer;
     font-size: 18px;
@@ -83,6 +88,12 @@ body.night-mode .top-right button {
 .content {
     padding: 20px;
     text-align: center;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    width: 200px; /* Dimensione ridotta e responsive */
 }
 
 .about {
@@ -112,7 +123,6 @@ body.night-mode .about p {
     bottom: 0;
 }
 
-
 body.night-mode .social-nav {
     background-color: #ff4c4c;
     padding: 10px 20px;
@@ -128,18 +138,50 @@ body.night-mode .social-nav {
     text-decoration: none;
     font-size: 24px;
 }
-body.night-mode {
-    background-color: #252323;
-    color: #ddd; /* Colore del testo bianco */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
-/* Header */
-.top-nav.night-mode {
-    background-color: #222;
-    color: #ddd; /* Colore del testo bianco */
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
 }
 
-/* Link */
-a.night-mode-link {
-    color: #ddd; /* Colore del testo bianco */
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+    }
+
+    .top-nav a {
+        display: none; /* Nasconde i link di navigazione */
+    }
+
+    .top-nav a.active {
+        display: block;
+    }
+
+    .logo {
+        position: static; /* Rimuove il posizionamento assoluto su mobile */
+    }
+
+    .top-right {
+        position: static; /* Rimuove il posizionamento assoluto su mobile */
+    }
+
+    .hamburger {
+        display: block; /* Mostra il menu hamburger */
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .top-right button {
+        padding: 6px; /* Riduce ulteriormente il padding del bottone notturno su schermi più piccoli */
+        font-size: 16px;
+    }
+}
+

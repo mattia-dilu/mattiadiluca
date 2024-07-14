@@ -10,12 +10,19 @@
 <body>
     <div class="top-nav">
         <div class="logo">
-            <img src="logo.png" alt="logo">
+            <img src="logo.jpeg" alt="logo">
         </div>
-        <a class="active" href="index.html">About Me</a>
-        <a href="#project">Projects</a>
-        <a href="#work">Work Experience</a>
-        <a href="#interest">Interests</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a class="active" href="index.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="work_experience.html">Work Experience</a>
+            <a href="interests.html">Interests</a>
+        </div>
         <div class="top-right">
             <button id="night-mode-btn">🌙</button>
             <a href="mailto:diluca.mattia@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -46,7 +53,14 @@
         <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a> 
     </nav>
-
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const topNav = document.querySelector('.top-nav');
+    
+        hamburger.addEventListener('click', () => {
+            topNav.classList.toggle('responsive');
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
