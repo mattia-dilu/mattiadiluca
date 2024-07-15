@@ -6,24 +6,15 @@ body {
     padding-bottom: 60px; /* Space for the fixed footer */
 }
 
-body.night-mode {
-    background-color: #f5f5f5;
-    color: #0b3d4b;
-}
-
 .top-nav {
     background-color: #08262e;
     overflow: hidden;
     padding: 10px 20px;
     display: flex;
-    justify-content: center; /* Centra i link di navigazione */
-    align-items: center; /* Allinea verticalmente */
-    position: relative; /* Necessario per il posizionamento degli elementi assoluti */
-    flex-wrap: wrap; /* Permette di gestire meglio lo spazio su dispositivi mobili */
-}
-
-body.night-mode .top-nav {
-    background-color: #ddd;
+    justify-content: center; /* Center the navigation links */
+    align-items: center; /* Align vertically */
+    position: relative; /* Necessary for absolute positioning */
+    flex-wrap: wrap; /* Manage space better on mobile devices */
 }
 
 .top-nav a {
@@ -34,18 +25,9 @@ body.night-mode .top-nav {
     font-size: 17px;
 }
 
-body.night-mode .top-nav a {
-    color: #0b3d4b;
-}
-
 .top-nav a:hover {
     background-color: #ddd;
     color: black;
-}
-
-body.night-mode .top-nav a:hover {
-    background-color: #0b3d4b;
-    color: white;
 }
 
 .top-nav a.active {
@@ -54,89 +36,26 @@ body.night-mode .top-nav a:hover {
 
 .logo {
     position: absolute;
-    left: 20px; /* Posiziona la logo sulla sinistra */
+    left: 20px; /* Position logo on the left */
 }
 
 .logo img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
-    border-radius: 50%; /* Rende l'immagine arrotondata */
+    border-radius: 50%; /* Make the image round */
 }
 
 .top-right {
     position: absolute;
-    right: 20px; /* Posiziona il gruppo di icone sulla destra */
+    right: 20px; /* Position the icon group on the right */
 }
 
-.top-right button {
-    background-color: #ff4c4c;
-    border: none;
+.top-right a {
     color: white;
-    padding: 8px; /* Ridotto per allinearsi con le icone */
-    margin: 0 10px;
-    cursor: pointer;
+    padding: 0 10px;
     font-size: 18px;
-    border-radius: 50%;
-}
-
-body.night-mode .top-right button {
-    background-color: #0b3d4b;
-    color: white;
-}
-
-.content {
-    padding: 20px;
-    text-align: center;
-}
-
-.content img {
-    max-width: 100%;
-    height: auto;
-    width: 200px; /* Dimensione ridotta e responsive */
-}
-
-.about {
-    color: #ff4c4c;
-    margin-top: 40px;
-    position: relative;
-}
-
-.about h2 {
-    margin: 0;
-}
-
-.about p {
-    color: white;
-}
-
-body.night-mode .about p {
-    color: #0b3d4b;
-}
-
-.social-nav {
-    background-color: #08262e;
-    padding: 10px 20px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-body.night-mode .social-nav {
-    background-color: #ff4c4c;
-    padding: 10px 20px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.social-nav a {
-    margin: 0 10px;
-    color: white;
     text-decoration: none;
-    font-size: 24px;
 }
 
 .hamburger {
@@ -151,37 +70,93 @@ body.night-mode .social-nav {
     margin: 5px;
 }
 
-/* Media Queries */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.about {
+    color: #ff4c4c;
+    margin-top: 40px;
+    position: relative;
+}
+
+.about h2 {
+    margin-left: 26%;
+}
+
+.about p {
+    color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.social-nav {
+    background-color: #08262e;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.social-nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 768px) {
     .top-nav {
         flex-direction: column;
     }
 
-    .top-nav a {
-        display: none; /* Nasconde i link di navigazione */
-    }
-
-    .top-nav a.active {
-        display: block;
+    .nav-links {
+        display: none; /* Hide navigation links */
     }
 
     .logo {
-        position: static; /* Rimuove il posizionamento assoluto su mobile */
+        position: static; /* Remove absolute positioning on mobile */
     }
 
     .top-right {
-        position: static; /* Rimuove il posizionamento assoluto su mobile */
+        position: static; /* Remove absolute positioning on mobile */
     }
 
     .hamburger {
-        display: block; /* Mostra il menu hamburger */
+        display: block; /* Show hamburger menu */
     }
 }
 
 @media screen and (max-width: 480px) {
-    .top-right button {
-        padding: 6px; /* Riduce ulteriormente il padding del bottone notturno su schermi più piccoli */
-        font-size: 16px;
+    .top-right a {
+        display: none;
+    }
+    .top-nav a.active {
+        display: none; /* Hide active link on mobile */
     }
 }
 
+canvas {
+    display: block;
+    margin: 0 auto;
+    width: 30vmin;
+    height: 30vmin;
+}
+
+h2 {
+    color: #ff4c4c;
+}
