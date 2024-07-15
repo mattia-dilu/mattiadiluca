@@ -7,6 +7,9 @@
     <link rel="icon" href="logo.jpeg" type="image/icon type">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Inserisci qui il CSS se non stai utilizzando un file esterno */
+    </style>
 </head>
 <body>
     <div class="top-nav">
@@ -32,11 +35,11 @@
     </div>
 
     <div class="content">
-        <h2>Projects</h2>
+        <h2 class="project-title">Projects</h2>
         <div class="projects-grid">
             <div class="project">
                 <img src="img/output.gif" alt="Diffusion model project">
-                <h3> <a href="https://github.com/mattia-dilu/Diffusion-Model">DIFFUSION MODEL</a> </h3>
+                <h3><a href="https://github.com/mattia-dilu/Diffusion-Model">DIFFUSION MODEL</a></h3>
                 <p>This project implements diffusion models using Python, with a specific focus on the MNIST dataset.</p>
             </div>
             <!-- Add more projects here -->
@@ -47,8 +50,24 @@
     <nav class="social-nav">
         <a href="https://www.instagram.com/mattia_dilu/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://github.com/mattia-dilu" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/mattia-diluca" target="_blank"><i class="fab fa-linkedin"></i></a> 
+        <a href="https://linkedin.com/in/mattia-diluca" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:diluca.mattia@gmail.com"><i class="fas fa-envelope"></i></a>
+
     </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elements = document.querySelectorAll(".project h3 a");
+            elements.forEach(function(element) {
+                var text = element.textContent;
+                var typingDuration = text.length / 6.8; // Regola la velocità in base alla lunghezza del testo
+                var blinkCaretDuration = 0.65;
+                var totalDuration = typingDuration + blinkCaretDuration;
+
+                element.style.animation = `typing ${typingDuration}s steps(${text.length}, end), blink-caret .75s step-end infinite, remove-caret ${totalDuration}s forwards`;
+                element.style.width = "100%"; // Attiva l'animazione
+            });
+        });    
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -195,23 +195,40 @@ h2 {
     border-radius: 8px;
 }
 
-.project h3 {
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #f44336; }
+}
+
+@keyframes remove-caret {
+    to { border-right: none; }
+}
+
+.project h3 a {
+    display: inline-block; /* Per permettere l'animazione */
     margin-top: 15px;
     font-size: 1.2em;
-    color:#f44336;
+    color: #f44336;
+    border-right: .15em solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Inizia con larghezza 0 */
+    animation-fill-mode: forwards; /* Mantiene lo stato finale dell'animazione */
 }
+
 
 .project p {
     font-size: 0.95em;
     color: #000000;
 }
 
-
-
-
-
 .work-experience {
-    background-color: #1a4a5a;
+    background-color: #52665d;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
@@ -220,7 +237,7 @@ h2 {
 }
 
 .work-experience h3 {
-    color: #0f0e0e;
+    color: #000000;
     cursor: pointer;
     margin: 0;
 }
@@ -246,3 +263,7 @@ h2 {
     list-style-type: disc;
     margin: 5px 0;
 }
+
+
+
+

@@ -96,3 +96,4 @@ function toggleDescription(id) {
         element.style.display = "none";
     }
 }
+
