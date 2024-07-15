@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mattia Di Luca - Work Experience</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Work Experiences</title>
+    <link rel="icon" href="logo.jpeg" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="top-nav">
@@ -20,11 +21,10 @@
         <div class="nav-links">
             <a href="index.html">About Me</a>
             <a href="projects.html">Projects</a>
-            <a class="active" href="work_experience.html">Work Experience</a>
+            <a class="active" href="work_experience.html">Work Experiences</a>
             <a href="interests.html">Interests</a>
         </div>
         <div class="top-right">
-           
             <a href="mailto:diluca.mattia@gmail.com"><i class="fas fa-envelope"></i></a>
             <a href="https://www.instagram.com/mattia_dilu/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/mattia-dilu" target="_blank"><i class="fab fa-github"></i></a>
@@ -32,8 +32,31 @@
     </div>
 
     <div class="content">
-        <h2>Work Experience</h2>
-        <p><!-- Il tuo contenuto "Work Experience" qui --></p>
+        <h2>Work Experiences</h2>
+        <div class="work-experience">
+            <h3 onclick="toggleDescription('desc1')">(High school) Intership - Network Administrator</h3>
+            <div id="desc1" class="description" style="display: none;">
+                <p><strong>Duration:</strong> October 2019</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>DB Management using Linux bash and phpMyAdmin</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="work-experience">
+            <h3 onclick="toggleDescription('desc2')">(High school) Internship - Mantero Sistemi</h3>
+            <div id="desc2" class="description" style="display: none;">
+                <p><strong>Duration:</strong> February 2018</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Troubleshooted Systems and Hardware</li>
+                    <li>Installed new Software and Hardware components</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Add your work experience here -->   
+        
     </div>
 
     <nav class="social-nav">

@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     background-color: #0b3d4b;
     color: white;
@@ -83,12 +83,12 @@ body {
 }
 
 .content {
-    padding: 20px;
+    
     text-align: center;
 }
 
 .about {
-    color: #ff4c4c;
+    color: #f44336;
     margin-top: 40px;
     position: relative;
 }
@@ -148,6 +148,7 @@ body {
     .top-nav a.active {
         display: none; /* Hide active link on mobile */
     }
+    
 }
 
 canvas {
@@ -158,5 +159,90 @@ canvas {
 }
 
 h2 {
-    color: #ff4c4c;
+    color: #f44336;;
+}
+
+.content {
+    padding: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.project {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 3px solid #f44336; /* Add a colored border */
+}
+
+.project img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color:#f44336;
+}
+
+.project p {
+    font-size: 0.95em;
+    color: #000000;
+}
+
+
+
+
+
+.work-experience {
+    background-color: #1a4a5a;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+.work-experience h3 {
+    color: #0f0e0e;
+    cursor: pointer;
+    margin: 0;
+}
+
+.work-experience h3:hover {
+    text-decoration: underline;
+}
+
+.work-experience .description {
+    display: none;
+    margin-top: 10px;
+}
+
+.work-experience .description p {
+    margin: 10px 0;
+}
+
+.work-experience .description ul {
+    padding-left: 20px;
+}
+
+.work-experience .description ul li {
+    list-style-type: disc;
+    margin: 5px 0;
 }
