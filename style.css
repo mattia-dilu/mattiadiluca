@@ -148,6 +148,10 @@ body {
     .top-nav a.active {
         display: none; /* Hide active link on mobile */
     }
+
+    .work-experience h3 {
+        text-decoration: underline;
+    }
     
 }
 
@@ -179,7 +183,6 @@ h2 {
         margin-right: 5%;
     }
 }
-
 .project {
     background-color: #f9f9f9;
     padding: 10px;
@@ -228,7 +231,7 @@ h2 {
 }
 
 .work-experience {
-    background-color: #52665d;
+    background-color: #08262e;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
@@ -237,7 +240,7 @@ h2 {
 }
 
 .work-experience h3 {
-    color: #000000;
+    color: #ffffff;
     cursor: pointer;
     margin: 0;
 }
@@ -253,6 +256,7 @@ h2 {
 
 .work-experience .description p {
     margin: 10px 0;
+    color:#f44336;
 }
 
 .work-experience .description ul {
@@ -262,6 +266,7 @@ h2 {
 .work-experience .description ul li {
     list-style-type: disc;
     margin: 5px 0;
+    color: rgb(255, 255, 255)
 }
 
 
